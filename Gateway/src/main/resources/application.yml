@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: gateway
+zuul:
+  ignored-services:
+    - "*"
+  routes:
+    catalog: /catalogMgtApi/**
+    basket: /basketMgtApi/**
+
+server:
+  port: 8080

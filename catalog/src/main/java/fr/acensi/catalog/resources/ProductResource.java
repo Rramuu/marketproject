@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ProductResource {
-    private String id;
+    private Long ProductId;
     private String name;
     private String description;
     private String image;

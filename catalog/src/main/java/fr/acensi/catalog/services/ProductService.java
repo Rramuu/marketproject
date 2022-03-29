@@ -20,7 +20,7 @@ public class ProductService {
     }
 
     private ProductResource mapToResource(ProductEntity productEntity) {
-        return new ProductResource(productEntity.getId().toString(), productEntity.getName(),
+        return new ProductResource(productEntity.getProductId(), productEntity.getName(),
                 null, productEntity.getImage(), productEntity.getPrice());
     }
 

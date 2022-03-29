@@ -28,4 +28,13 @@ public class ProductService {
         ProductEntity productEntity = productRepository.findById(productId).orElseThrow(RuntimeException::new);
         return this.mapToResource(productEntity);
     }
+    
+    public ProductResource saveProduct(ProductEntity productEntity) {
+    	 ProductEntity currentProductEntity = productRepository.save(productEntity);
+    	 return this.mapToResource(currentProductEntity);
+    }
+    
+    public ProductResource saveProduct(Long productId, ProductEntity productEntity) {
+    	 ProductEntity currentProductEntity = productRepository.
+    }
 }

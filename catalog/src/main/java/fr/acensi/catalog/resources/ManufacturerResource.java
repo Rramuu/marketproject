@@ -7,10 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class ProductResource {
-    private Long ProductId;
-    private String name;
-    private String description;
-    private String image;
-    private double price;
+public class ManufacturerResource {
+	private Long ManufacturerId;
+	private String name;
 }

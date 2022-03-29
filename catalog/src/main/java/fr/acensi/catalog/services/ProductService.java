@@ -20,12 +20,21 @@ public class ProductService {
     }
 
     private ProductResource mapToResource(ProductEntity productEntity) {
-        return new ProductResource(productEntity.getId().toString(), productEntity.getName(),
+        return new ProductResource(productEntity.getProductId(), productEntity.getName(),
                 null, productEntity.getImage(), productEntity.getPrice());
     }
 
     public ProductResource retrieveProductById(Long productId) {
         ProductEntity productEntity = productRepository.findById(productId).orElseThrow(RuntimeException::new);
         return this.mapToResource(productEntity);
+    }
+    
+    public ProductResource saveProduct(ProductEntity productEntity) {
+    	 ProductEntity currentProductEntity = productRepository.save(productEntity);
+    	 return this.mapToResource(currentProductEntity);
+    }
+    
+    public ProductResource saveProduct(Long productId, ProductEntity productEntity) {
+    	 ProductEntity currentProductEntity = productRepository.
     }
 }
